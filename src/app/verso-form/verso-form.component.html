@@ -1,0 +1,16 @@
+<h2>Verso</h2>
+<form [formGroup]='versoForm' novalidate>
+  <label>Jugador
+    <input class="form-control" formControlName="jugador">
+  </label>
+
+  <label>Verso
+    <input class="form-control" formControlName="contenido">
+  </label>  
+</form>
+
+<input type='button' value='Agregar verso' (click)='onAgregarVerso()'> 
+
+<p>Verso : {{versoForm.value | json}} | {{versoForm.status}}</p>
+<p>Verso real real : {{verso | json}}</p>
+
